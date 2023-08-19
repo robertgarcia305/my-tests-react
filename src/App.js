@@ -1,23 +1,46 @@
+// steps:
+//go to your directory where you want to add the react app
+//   my-app should be changed to whatever your name of the app
+//   npx create-react-app my-app
+//   cd my-app
+
+//   npm start
+// if npm start doesn't work do: 
+
+// npm install react-scripts
+// then react-scripts start
+
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import React from "react";
+import ReactDOM from "react-dom";
+
+// import components
+import Modal from "../src/components/Modal";
+
+const App = () => {
+  // states
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  //functions
+  const openModal = () => {
+    setModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setModalOpen(false);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-wrap">
+      <h3>please click the modal</h3>
+      <Modal 
+      closeModal={closeModal}
+      isOpen={isModalOpen}
+      />
+
+      <button onClick={openModal}>click me to open</button>
     </div>
   );
 }
