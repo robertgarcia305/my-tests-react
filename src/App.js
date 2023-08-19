@@ -10,14 +10,15 @@
 // npm install react-scripts
 // then react-scripts start
 
-import logo from './logo.svg';
+import logo from "../src/img/logo.svg";
 import './App.css';
 
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 // import components
 import Modal from "../src/components/Modal";
+import Menu from "../src/components/Menu"
 
 const App = () => {
   // states
@@ -34,13 +35,23 @@ const App = () => {
 
   return (
     <div className="app-wrap">
-      <h3>please click the modal</h3>
-      <Modal 
-      closeModal={closeModal}
-      isOpen={isModalOpen}
-      />
 
-      <button onClick={openModal}>click me to open</button>
+      {/* modal */}
+      <div className="modal-app-wrap">
+        <h3>please click the modal</h3>
+        <Modal 
+        closeModal={closeModal}
+        isOpen={isModalOpen}
+        />
+
+        <button onClick={openModal}>click me to open</button>
+      </div>
+
+      {/* menu */}
+      <div className="menu-app-wrap">
+        <Menu />
+      </div>
+
     </div>
   );
 }
