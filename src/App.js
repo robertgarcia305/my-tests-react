@@ -10,48 +10,79 @@
 // npm install react-scripts
 // then react-scripts start
 
-import logo from "../src/img/logo.svg";
-import './App.css';
+// import logo from "../src/img/logo.svg";
+// import './App.css';
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
+// import ReactDOM from "react-dom";
+
+// // import components
+// import Modal from "../src/components/Modal";
+// import Menu from "../src/components/Menu"
+
+// const App = () => {
+//   // states
+//   const [isModalOpen, setModalOpen] = useState(false);
+
+//   //functions
+//   const openModal = () => {
+//     setModalOpen(true);
+//   }
+
+//   const closeModal = () => {
+//     setModalOpen(false);
+//   }
+
+//   return (
+//     <div className="app-wrap">
+
+//       {/* modal */}
+//       <div className="modal-app-wrap">
+//         <h3>please click the modal</h3>
+//         <Modal 
+//         closeModal={closeModal}
+//         isOpen={isModalOpen}
+//         />
+
+//         <button onClick={openModal}>click me to open</button>
+//       </div>
+
+//       {/* menu */}
+//       <div className="menu-app-wrap">
+//         <Menu />
+//       </div>
+
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+
+
+// box challenge
+
+import {React, useState } from "react";
 import ReactDOM from "react-dom";
+import Box from "./components/Box";
 
-// import components
-import Modal from "../src/components/Modal";
-import Menu from "../src/components/Menu"
+import boxes from "./squaresData";
 
 const App = () => {
-  // states
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [squares, setSquares] = useState(boxes);
 
-  //functions
-  const openModal = () => {
-    setModalOpen(true);
-  }
 
-  const closeModal = () => {
-    setModalOpen(false);
-  }
+  const squareElements = squares.map(square => {
+    return (
+      <Box key={square.id} on={square.on}/>
+    )
+  });
 
   return (
-    <div className="app-wrap">
-
-      {/* modal */}
-      <div className="modal-app-wrap">
-        <h3>please click the modal</h3>
-        <Modal 
-        closeModal={closeModal}
-        isOpen={isModalOpen}
-        />
-
-        <button onClick={openModal}>click me to open</button>
-      </div>
-
-      {/* menu */}
-      <div className="menu-app-wrap">
-        <Menu />
-      </div>
-
+    <div className="container">
+      {squareElements}
     </div>
   );
 }
