@@ -1,5 +1,5 @@
-// steps:
-//go to your directory where you want to add the react app
+steps:
+// go to your directory where you want to add the react app
 //   my-app should be changed to whatever your name of the app
 //   npx create-react-app my-app
 //   cd my-app
@@ -10,53 +10,53 @@
 // npm install react-scripts
 // then react-scripts start
 
-// import logo from "../src/img/logo.svg";
-// import './App.css';
+import logo from "../src/img/logo.svg";
+import './App.css';
 
-// import React, { useState } from "react";
-// import ReactDOM from "react-dom";
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
-// // import components
-// import Modal from "../src/components/Modal";
-// import Menu from "../src/components/Menu"
+// import components
+import Modal from "../src/components/Modal";
+import Menu from "../src/components/Menu"
 
-// const App = () => {
-//   // states
-//   const [isModalOpen, setModalOpen] = useState(false);
+const App = () => {
+  // states
+  const [isModalOpen, setModalOpen] = useState(false);
 
-//   //functions
-//   const openModal = () => {
-//     setModalOpen(true);
-//   }
+  //functions
+  const openModal = () => {
+    setModalOpen(true);
+  }
 
-//   const closeModal = () => {
-//     setModalOpen(false);
-//   }
+  const closeModal = () => {
+    setModalOpen(false);
+  }
 
-//   return (
-//     <div className="app-wrap">
+  return (
+    <div className="app-wrap">
 
-//       {/* modal */}
-//       <div className="modal-app-wrap">
-//         <h3>please click the modal</h3>
-//         <Modal 
-//         closeModal={closeModal}
-//         isOpen={isModalOpen}
-//         />
+      {/* modal */}
+      <div className="modal-app-wrap">
+        <h3>please click the modal</h3>
+        <Modal 
+        closeModal={closeModal}
+        isOpen={isModalOpen}
+        />
 
-//         <button onClick={openModal}>click me to open</button>
-//       </div>
+        <button onClick={openModal}>click me to open</button>
+      </div>
 
-//       {/* menu */}
-//       <div className="menu-app-wrap">
-//         <Menu />
-//       </div>
+      {/* menu */}
+      <div className="menu-app-wrap">
+        <Menu />
+      </div>
 
-//     </div>
-//   );
-// }
+    </div>
+  );
+}
 
-// export default App;
+export default App;
 
 
 
