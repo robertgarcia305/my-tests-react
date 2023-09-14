@@ -108,41 +108,41 @@ const accordionData = [
   );
   
 //styles.css
-  .App {
-    font-family: sans-serif;
-    text-align: center;
-  }
+//   .App {
+//     font-family: sans-serif;
+//     text-align: center;
+//   }
   
-  * {
-    margin: 0px;
-    box-sizing: border-box;
-  }
+//   * {
+//     margin: 0px;
+//     box-sizing: border-box;
+//   }
   
-  .description {
-    transition: max-height 0.5s ease-in-out; /* Only transition max-height */
-    max-height: 0px;
-    overflow: hidden;
-  }
+//   .description {
+//     transition: max-height 0.5s ease-in-out; /* Only transition max-height */
+//     max-height: 0px;
+//     overflow: hidden;
+//   }
   
-  .show {
-    color: red;
-    max-height: 1000px; /* Set a fixed value, could be smaller than 1000px */
-  }
+//   .show {
+//     color: red;
+//     max-height: 1000px; /* Set a fixed value, could be smaller than 1000px */
+//   }
   
-  .hide {
-    max-height: 0px; /* Set a fixed value for consistency */
-    color: blue;
-  }
+//   .hide {
+//     max-height: 0px; /* Set a fixed value for consistency */
+//     color: blue;
+//   }
   
-  .wrap {
-    width: 300px;
-    border: 1px solid red;
-  }
+//   .wrap {
+//     width: 300px;
+//     border: 1px solid red;
+//   }
   
-  .header-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer; /* Add cursor pointer to indicate interactivity */
-  }
+//   .header-wrap {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     cursor: pointer; /* Add cursor pointer to indicate interactivity */
+//   }
   

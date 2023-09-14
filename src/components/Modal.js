@@ -55,36 +55,36 @@ export default App;
 
 
 // index.css
-.App {
-    font-family: sans-serif;
-    text-align: center;
-  }
+// .App {
+//     font-family: sans-serif;
+//     text-align: center;
+//   }
   
-  .modal {
-    background-color: #949494;
-    position: absolute;
-    width: 0px;
-    height: 0px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-radius: 20px;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    visibility: hidden;
-  }
+//   .modal {
+//     background-color: #949494;
+//     position: absolute;
+//     width: 0px;
+//     height: 0px;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     text-align: center;
+//     border-radius: 20px;
+//     padding: 10px;
+//     opacity: 0;
+//     transition: opacity 0.3s;
+//     visibility: hidden;
+//   }
   
-  .modal-active {
-    opacity: 1;
-    width: 200px;
-    height: 200px;
-    visibility: visible;
-  }
+//   .modal-active {
+//     opacity: 1;
+//     width: 200px;
+//     height: 200px;
+//     visibility: visible;
+//   }
 
 // index.js
 // import { StrictMode } from "react";

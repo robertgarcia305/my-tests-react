@@ -1,3 +1,9 @@
+These are going to be my react tests, components in their respsective js file, you can create a sandbox and create all different files you need 
+
+the reason why i did it this way is so that i don't have to create-react-app for each component i'm working on
+very easily this will become very cluttered, so think of this like an index on how to do certain things, just go into the components folder and start browsing
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
