@@ -47,12 +47,23 @@ const App = () => {
     }
   };
 
+  // inline styling
+  const style = {
+    color: "white",
+    backgroundColor: "blue",
+    fontSize: "23px"
+  };
+
   return (
-    <Counter minus={substract} value={number} plus={add} />
-  )
+    <div className="app-wrap" style={style}>
+      <Counter minus={substract} value={number} plus={add} />
+      {/* <Counter minus={substract} value={number} plus={add} /> */}
+    </div>
+  );
 };
 
 export default App;
+
 
 
 // index.js
