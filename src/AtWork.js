@@ -852,31 +852,44 @@ export default App;
 import React from "react";
 import ReactDOM from "react-dom";
 
-import hambIcon from "./hamburger.png";
-import closeIcon from "./close.png";
+import hambIcon from "./img/hamburger.png";
+import closeIcon from "./img/close.png";
+
+import logo from "./img/logo.png";
 
 const Hamburger = (props) => {
-    return (
-        <div className="hamb-wrap">
-            <div className="top">
-                <div>
-                    <img src={logo}></img>
-                </div>
-                <div className="controls">
-                    <img onClick={props.toggleNav} src={props.display ? hambIcon : closeIcon }></img>
-                </div>
-            </div>
-            <div className={`botttom ${props.display ? "show" : "hide"}`}>
-                <ul>
-                    <li><a>Home</a></li>
-                    <li><a>Home</a></li>
-                    <li><a>Home</a></li>
-                    <li><a>Home</a></li>
-                </ul>
-            </div>
+  return (
+    <div className="hamb-wrap">
+      <div className="top">
+        <div>
+          <img className="logo" src={logo}></img>
         </div>
-    );
-}
+        <div className="controls">
+          <img
+            onClick={props.toggleNav}
+            src={props.display ? closeIcon : hambIcon}
+          ></img>
+        </div>
+      </div>
+      <div className={`botttom ${props.display ? "show" : "hide"}`}>
+        <ul>
+          <li>
+            <a>Home</a>
+          </li>
+          <li>
+            <a>Home</a>
+          </li>
+          <li>
+            <a>Home</a>
+          </li>
+          <li>
+            <a>Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
 export default Hamburger;
 
@@ -884,29 +897,29 @@ export default Hamburger;
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import Hamburger from "../src/components/Hamburger"
+import "./styles.css";
+
+import Hamburger from "./Hamburger";
 
 const App = () => {
-    // states for icons and 
-    const [icon, setIcon] = useState(false);
-    const [nav, setNav] = useState(false);
+  // states for icons and
+  const [icon, setIcon] = useState(false);
+  const [nav, setNav] = useState(false);
 
-    const toggleNav = () => {
-        setIcon(!icon)
-        setNav(!nav)
-    }
+  const toggleNav = () => {
+    setIcon(!icon);
+    setNav(!nav);
+  };
 
-    return (
-        <div>
-            <Hamburger 
-            toggleNav={toggleNav}
-            display={nav}
-            />
-        </div>
-    );
-}
+  return (
+    <div>
+      <Hamburger toggleNav={toggleNav} display={nav} />
+    </div>
+  );
+};
 
 export default App;
+
 
 
 
