@@ -940,31 +940,85 @@ root.render(
 // 09/21/2023
 // forms 
 // App.js
-import React, { useState } from "react"
+import "./styles.css";
+import React, { useState } from "react";
 
 const App = () => {
-    const [firstName, setFirstName] = useState("");;
+  const [firstName, setFirstName] = useState("");
+  const [displayName, setDisplayName] = useState(false);
 
-    const changeName = (event) => {
-        setFirstName(event.target.value);
-    }
+  const handleChange = (event) => {
+    setFirstName(event.target.value);
+  };
 
-    return (
-        <div className="app-wrap">
-            <form>
-                <input
-                type="input"
-                placeholder="enter first name"
-                onChange={changeName}
-                >
-                </input>
-            </form>
-            <p>{firstName}</p>
-        </div>
-    )
-}
+  const checkDisplayName = () => {
+    setDisplayName(true);
+  };
+
+  return (
+    <div>
+      <form>
+        <input
+          type="input"
+          placeholder="my first box"
+          onChange={handleChange}
+        />
+        <button onClick={checkDisplayName}>click me</button>
+      </form>
+      {/* for using a button */}
+      {/* <p>your first name: {displayName === true ? firstName : ""}</p> */}
+      <p>first name: {firstName}</p>
+    </div>
+  );
+};
 
 export default App;
+
+
+
+
+import "./styles.css";
+import React, { useState } from "react";
+
+const App = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: ""
+  });
+
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+  console.log(formData);
+  return (
+    <div>
+      <form>
+        <input
+          type="input"
+          placeholder="my first name"
+          onChange={handleChange}
+          name="firstName"
+        />
+        <input
+          type="input"
+          placeholder="my last name"
+          onChange={handleChange}
+          name="lastName"
+        />
+        <input
+          type="input"
+          placeholder="email"
+          onChange={handleChange}
+          name="email"
+        />
+      </form>
+    </div>
+  );
+};
+
+export default App;
+
 
 
 // index.js
