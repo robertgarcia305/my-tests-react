@@ -934,3 +934,47 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <App />
 );
+
+
+
+// 09/21/2023
+// forms 
+// App.js
+import React, { useState } from "react"
+
+const App = () => {
+    const [firstName, setFirstName] = useState("");;
+
+    const changeName = (event) => {
+        setFirstName(event.target.value);
+    }
+
+    return (
+        <div className="app-wrap">
+            <form>
+                <input
+                type="input"
+                placeholder="enter first name"
+                onChange={changeName}
+                >
+                </input>
+            </form>
+            <p>{firstName}</p>
+        </div>
+    )
+}
+
+export default App;
+
+
+// index.js
+import React from "react"
+import ReactDOM from "react-dom"
+
+import App from "./App"
+
+const root = ReactDOM.createRoot(document.getElementById("root"))
+
+root.render(
+    <App />
+);
